@@ -6,9 +6,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.jumbotron-home {
-    background-image: url(image_path('home-bg.jpg'));
+.jumbotron {
+    background-image: url(image_path('shoes.jpg'));
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+#fullscreen {
+  background-image: url(image_path('sunset.jpg'));
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh
+}
+
+#fullscreen-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.h1_main {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height:100px;
+  color: white;
+  text-align: center;
+}
+
+.h2_main {
+  color: white;
+}
+
+.h6_main{
+  color: white;
+  text-align: center;
+}
+
+.p_main{
+  position: absolute;
+  margin: auto;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height:100px;
+  color: white;
+  text-align: center;
 }
