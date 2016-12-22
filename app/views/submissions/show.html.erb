@@ -1,5 +1,8 @@
 <div class="container">
-
+  <p>
+    <strong>User:</strong>
+    <%= @submission.user.email %>
+  </p>
   <p>
     <strong>Title:</strong>
     <%= @submission.title %>
@@ -10,12 +13,16 @@
     <%= @submission.url %>
   </p>
 
-  <p>
-    <strong>Content:</strong>
-    <%= @submission.content %>
-  </p>
+  <% if @submission.content? %>
+    <p>
+      <strong>Content:</strong>
+      <%= @submission.content %>
+    </p>
+  <% end %>
+
   <%if @submission.user == current_user %>
     <%= link_to 'Edit', edit_submission_path(@submission) %> |
+    <%= link_to 'Delete', @submission, method: :delete, class: "card-link" %> |
   <% end %>
   <%= link_to 'Back', submissions_path %>
 </div>

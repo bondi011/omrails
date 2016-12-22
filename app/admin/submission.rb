@@ -13,6 +13,6 @@ ActiveAdmin.register Submission do
 #   permitted
 # end
 
-  permit_params :content, :url, :title 
+  permit_params :user, :content, :url, :title 
 
 end
