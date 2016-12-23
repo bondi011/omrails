@@ -13,12 +13,14 @@ ActiveAdmin.register User do
 #   permitted
 # end
 
-  permit_params :email, :admin
+  permit_params :email, :admin, :username, :name
 
   form do |f|
     f.semantic_errors
     f.inputs do
       f.input :email
+      f.input :name
+      f.input :username
       f.input :admin
     end
       f.actions
@@ -26,7 +28,9 @@ ActiveAdmin.register User do
   index do
     id_column
     column :email
-    column :admin 
+    column :name
+    column :username
+    column :admin
     actions
   end
 end

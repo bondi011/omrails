@@ -18,7 +18,7 @@
           <td><%= submission.title %></td>
           <td><%= submission.url %></td>
           <td><%= submission.content %></td>
-          <td><%= submission.user.email %></td>
+          <td><%= submission.user.username %></td>
           <td><%= link_to 'Show', submission %></td>
           <% if submission.user == current_user %>
             <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
